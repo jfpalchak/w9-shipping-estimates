@@ -17,45 +17,45 @@ namespace ShippingEstimates.Tests
 
     // GETTER METHODS
     [TestMethod]
-    public void GetLength_ReturnsValueOfLength_Int()
+    public void GetLength_ReturnsValueOfLength_Float()
     {
-      int length = 5;
+      float length = 5;
       
       Parcel newParcel = new Parcel(length, 1, 1, 10);
-      int result = newParcel.Length;
+      float result = newParcel.Length;
       
       Assert.AreEqual(length, result);
     }
 
     [TestMethod]
-    public void GetWidth_ReturnsValueOfWidth_Int()
+    public void GetWidth_ReturnsValueOfWidth_Float()
     {
-      int width = 6;
+      float width = 6;
       
       Parcel newParcel = new Parcel(5, width, 1, 10);
-      int result = newParcel.Width;
+      float result = newParcel.Width;
 
       Assert.AreEqual(width, result);
     }
 
     [TestMethod]
-    public void GetHeight_ReturnsValueOfHeight_Int()
+    public void GetHeight_ReturnsValueOfHeight_Float()
     {
-      int height = 10;
+      float height = 10;
 
       Parcel newParcel = new Parcel(5, 6, height, 10);
-      int result = newParcel.Height;
+      float result = newParcel.Height;
 
       Assert.AreEqual(height, result);
     }
 
     [TestMethod]
-    public void GetWeight_ReturnsValueOfWeight_Int()
+    public void GetWeight_ReturnsValueOfWeight_Float()
     {
-      int weight = 10;
+      float weight = 10;
 
       Parcel newParcel = new Parcel(5, 6, 10, 10);
-      int result = newParcel.Weight;
+      float result = newParcel.Weight;
 
       Assert.AreEqual(weight, result);
     }

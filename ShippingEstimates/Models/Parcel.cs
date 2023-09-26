@@ -4,12 +4,12 @@ namespace ShippingEstimates.Models
 {
   public class Parcel
   {
-    public int Length { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
-    public int Weight { get; set; }
+    public float Length { get; set; }
+    public float Width { get; set; }
+    public float Height { get; set; }
+    public float Weight { get; set; }
 
-    public Parcel(int length, int width, int height, int weight)
+    public Parcel(float length, float width, float height, float weight)
     {
       Length = length;
       Width = width;
