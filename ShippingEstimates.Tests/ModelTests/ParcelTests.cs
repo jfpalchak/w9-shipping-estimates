@@ -25,5 +25,16 @@ namespace ShippingEstimates.Tests
       //assert
       Assert.AreEqual(length, result);
     }
+
+    [TestMethod]
+    public void GetWidth_ReturnsValueOfWidth_Int()
+    {
+      int width = 6;
+      
+      Parcel newParcel = new Parcel(5, width);
+      int result = newParcel.Width;
+
+      Assert.AreEqual(width, result);
+    }
   }
 }
