@@ -16,5 +16,10 @@ namespace ShippingEstimates.Models
       Height = height;
       Weight = weight;
     }
+
+    public float Volume()
+    {
+      return Length * Width * Height;
+    }
   }
 }
