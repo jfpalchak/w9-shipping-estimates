@@ -7,22 +7,23 @@ namespace ShippingEstimates.Tests
   [TestClass]
   public class ParcelTests
   {
+    // CONSTRUCTOR
     [TestMethod]
     public void ParcelConstructor_CreatesInstanceOfParcel_Parcel()
     {
-      Parcel newParcel = new Parcel(5);
+      Parcel newParcel = new Parcel(5, 5, 5, 10);
       Assert.AreEqual(typeof(Parcel), newParcel.GetType());
     }
 
+    // GETTER METHODS
     [TestMethod]
     public void GetLength_ReturnsValueOfLength_Int()
     {
-      // arrange
       int length = 5;
-      //act
-      Parcel newParcel = new Parcel(length);
+      
+      Parcel newParcel = new Parcel(length, 1, 1, 10);
       int result = newParcel.Length;
-      //assert
+      
       Assert.AreEqual(length, result);
     }
 
@@ -31,21 +32,32 @@ namespace ShippingEstimates.Tests
     {
       int width = 6;
       
-      Parcel newParcel = new Parcel(5, width);
+      Parcel newParcel = new Parcel(5, width, 1, 10);
       int result = newParcel.Width;
 
       Assert.AreEqual(width, result);
     }
 
     [TestMethod]
-    public void getHeight_ReturnsValueOfHeight_Int()
+    public void GetHeight_ReturnsValueOfHeight_Int()
     {
       int height = 10;
 
-      Parcel newParcel = new Parcel(5, 6, 10);
+      Parcel newParcel = new Parcel(5, 6, height, 10);
       int result = newParcel.Height;
 
       Assert.AreEqual(height, result);
+    }
+
+    [TestMethod]
+    public void GetWeight_ReturnsValueOfWeight_Int()
+    {
+      int weight = 10;
+
+      Parcel newParcel = new Parcel(5, 6, 10, 10);
+      int result = newParcel.Weight;
+
+      Assert.AreEqual(weight, result);
     }
   }
 }
