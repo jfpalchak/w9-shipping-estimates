@@ -74,5 +74,28 @@ namespace ShippingEstimates.Tests
 
       Assert.AreEqual(volume, result);
     }
+
+    // COST TO SHIP METHOD
+    [TestMethod]
+    public void CostToShip_ReturnsCostToShipParcel_Float()
+    {
+      Parcel newParcel = new Parcel(5, 3, 4, 10);
+
+      float result = newParcel.CostToShip();
+
+      Assert.IsTrue(result > 0);
+    }
+
+    public void CostToShip_CalculatesCostUsingGreatestValueBetweenWeightAndDimensionalWeight_Float()
+    {
+      
+      Parcel parcelOne = new Parcel(5, 3, 3, 0.43165466f);
+      Parcel parcelTwo = new Parcel(5, 3, 4, 0.3333f);
+
+      float costOne = parcelOne.CostToShip();
+      float costTwo = parcelTwo.CostToShip();
+
+      Assert.AreEqual(costOne, costTwo);
+    }
   }
 }
