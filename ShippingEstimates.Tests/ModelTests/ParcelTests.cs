@@ -59,5 +59,20 @@ namespace ShippingEstimates.Tests
 
       Assert.AreEqual(weight, result);
     }
+
+    // VOLUME METHOD
+    [TestMethod]
+    public void Volume_ReturnsTheProductOfParcelDimensions_Float()
+    {
+      float length = 5;
+      float width = 3;
+      float height = 4;
+      float volume = length * width * height;
+
+      Parcel newParcel = new Parcel(length, width, height, 10);
+      float result = newParcel.Volume();
+
+      Assert.AreEqual(volume, result);
+    }
   }
 }
