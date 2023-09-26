@@ -5,6 +5,6 @@ namespace ShippingEstimates.Controllers
 {
   public class ParcelsController : Controller
   {
-
+    
   }
 }
