@@ -36,5 +36,16 @@ namespace ShippingEstimates.Tests
 
       Assert.AreEqual(width, result);
     }
+
+    [TestMethod]
+    public void getHeight_ReturnsValueOfHeight_Int()
+    {
+      int height = 10;
+
+      Parcel newParcel = new Parcel(5, 6, 10);
+      int result = newParcel.Height;
+
+      Assert.AreEqual(height, result);
+    }
   }
 }
