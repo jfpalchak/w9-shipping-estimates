@@ -1,3 +1,4 @@
+using System;
 // USING DIRECTIVE
 
 namespace ShippingEstimates.Models
@@ -20,6 +21,19 @@ namespace ShippingEstimates.Models
     public float Volume()
     {
       return Length * Width * Height;
+    }
+
+    public float CostToShip()
+    {
+      float volume = this.Volume();
+      float dimWeight = volume / 139;
+
+      if (dimWeight < Weight)
+      {
+        dimWeight = Weight;
+      }
+
+      return (dimWeight * 1.89f) + 10;
     }
   }
 }
